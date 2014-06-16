@@ -1,0 +1,32 @@
+ja:
+  activerecord:
+    models:
+      meeting: "イベント"
+      session: "セッション"
+    attributes:
+      meeting:
+        id: "ID"
+        name: "イベント名"
+        type: "タイプ"
+        start_at: "開始日時"
+        end_at: "終了日時"
+        registration_start_at: "登録開始日時"
+        registration_end_at: "登録終了日時"
+        place: "会場"
+        target: "対象"
+        description: "概要"
+        software: "使用ソフト"
+        location: "場所（地域）"
+        form: "形式"
+        note: "備考"
+      session:
+        id: "ID"
+        name: "セッション名"
+        code: "コード"
+        category: "カテゴリ"
+        start_at: "開始日時"
+        end_at: "終了日時"
+        floor_name: "フロア名"
+        capacity: "定員"
+        amount: "金額"
+        counter: "人数"

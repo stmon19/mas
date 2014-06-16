@@ -1,0 +1,45 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @meeting.name
+p
+  strong Type:
+  = @meeting.type
+p
+  strong Start at:
+  = @meeting.start_at
+p
+  strong End at:
+  = @meeting.end_at
+p
+  strong Registration start at:
+  = @meeting.registration_start_at
+p
+  strong Registration end at:
+  = @meeting.registration_end_at
+p
+  strong Place:
+  = @meeting.place
+p
+  strong Target:
+  = @meeting.target
+p
+  strong Description:
+  = @meeting.description
+p
+  strong Software:
+  = @meeting.software
+p
+  strong Location:
+  = @meeting.location
+p
+  strong Form:
+  = @meeting.form
+p
+  strong Note:
+  = @meeting.note
+
+= link_to 'Edit', edit_meeting_path(@meeting)
+'|
+= link_to 'Back', meetings_path

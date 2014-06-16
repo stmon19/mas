@@ -1,0 +1,39 @@
+div.row
+  div.col-lg-12
+    div.page-header
+        h1 = t :index, scope: [:page, :title, :meeting]
+        div.panel.panel-primary
+          div.panel-heading.text-center
+            h3.panel-title = t :event_registration, scope: :label
+          div.panel-body.text-center
+            = t :please_select, scope: [:message, :event]
+
+    table.table.table-striped.table-hover
+      thead
+        tr.warning
+          th = Meeting.human_attribute_name :id
+          th = Meeting.human_attribute_name :name
+          th = Meeting.human_attribute_name :type
+          th = Meeting.human_attribute_name :start_at
+          th = Meeting.human_attribute_name :end_at
+          th = Meeting.human_attribute_name :registration_start_at
+          th = Meeting.human_attribute_name :registration_end_at
+          th = Meeting.human_attribute_name :place
+          th
+      - @meetings.each do |meeting|
+        tbody
+          tr
+            td = meeting.id
+            td = meeting.name
+            td = meeting.type
+            td = format_default meeting.start_at
+            td = format_default meeting.end_at
+            td = format_default meeting.registration_start_at
+            td = format_default meeting.registration_end_at
+            td = meeting.place
+
+            td = link_to meeting_sessions_path(meeting) do
+              button.btn.btn-primary.btn-xs = t :next, scope: :label
+
+    div.text-right
+      = link_to "new", new_meeting_path

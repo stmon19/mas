@@ -1,0 +1,35 @@
+ja:
+  label:
+    edit: 修正
+    register: 登録
+    select: 選択
+    next: 次へ
+    selected_confirmation: 選択内容確認
+    event_registration: イベント参加登録
+    session_selection: セッション選択
+    back_to_top: TOPに戻る
+    copyright: Copyright © 2014 Event Manegement System All rights reserved.
+  message:
+    event:
+      please_select: 参加希望のイベントを1つご選択ください。
+    session:
+      index:
+        remark: 参加ご希望セッションに✓をつけ「次へ」ボタンを押してください。<br>「選択」欄が「済」になっているセッションは、既に登録済みのセッションです。
+      selected:
+        remark: |
+          登録した内容をご確認ください。
+          この内容でよろしければ「登録」ボタンを押してください。
+          登録内容を修正する場合は、「修正」ボタンを押してください。
+  page:
+    title:
+      base: Event Management System
+      meeting: 
+        index: イベント一覧
+      session: 
+        index: セッション一覧
+        selected: 選択したセッション一覧
+      product: 製品一覧
+  nav:
+    title:
+      meeting: Meetings
+      product: Products

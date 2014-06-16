@@ -1,0 +1,39 @@
+= form_for [@meeting, @session] do |f|
+  - if @session.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@session.errors.count, "error")} prohibited this session from being saved:"
+      ul
+        - @session.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :meeting_id
+    = f.text_field :meeting_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :code
+    = f.text_field :code
+  .field
+    = f.label :category
+    = f.text_field :category
+  .field
+    = f.label :start_at
+    = f.datetime_select :start_at
+  .field
+    = f.label :end_at
+    = f.datetime_select :end_at
+  .field
+    = f.label :floor_name
+    = f.text_field :floor_name
+  .field
+    = f.label :capacity
+    = f.text_field :capacity
+  .field
+    = f.label :amount
+    = f.text_field :amount
+  .field
+    = f.label :counter
+    = f.text_field :counter
+  .actions = f.submit 'Save'

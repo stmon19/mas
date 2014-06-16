@@ -1,0 +1,36 @@
+p#notice = notice
+
+p
+  strong Meeting:
+  = @session.meeting_id
+p
+  strong Name:
+  = @session.name
+p
+  strong Code:
+  = @session.code
+p
+  strong Category:
+  = @session.category
+p
+  strong Start at:
+  = @session.start_at
+p
+  strong End at:
+  = @session.end_at
+p
+  strong Floor name:
+  = @session.floor_name
+p
+  strong Capacity:
+  = @session.capacity
+p
+  strong Amount:
+  = @session.amount
+p
+  strong Counter:
+  = @session.counter
+
+= link_to 'Edit', edit_session_path(@session)
+'|
+= link_to 'Back', sessions_path

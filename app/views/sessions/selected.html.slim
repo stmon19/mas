@@ -1,0 +1,35 @@
+div.row
+  div.col-lg-12
+    div.page-header
+        h1 = t :selected, scope: [:page, :title, :session]
+        div.panel.panel-primary
+          div.panel-heading.text-center
+            h3.panel-title = t :selected_confirmation, scope: :label
+          div.panel-body.text-center
+            = lb_to_br(t :remark, scope: [:message, :session, :selected] ).html_safe
+
+    table.table.table-striped.table-hover
+      thead
+        tr.warning
+          th = Session.human_attribute_name :id
+          th = Session.human_attribute_name :name
+          th = Session.human_attribute_name :floor_name
+          th = Session.human_attribute_name :start_at
+          th = Session.human_attribute_name :end_at
+          th = Session.human_attribute_name :capacity
+          th = Session.human_attribute_name :amount
+      - @sessions.each do |session|
+        tbody
+          tr
+            td = session.id
+            td = session.name
+            td = session.floor_name
+            td = format_default session.start_at
+            td = format_default session.end_at
+            td = session.capacity
+            td = session.amount
+
+    div.text-center.submit
+      button.btn.btn-primary.btn-sm = t :edit, scope: :label
+      button.btn.btn-primary.btn-sm = t :register, scope: :label
+        

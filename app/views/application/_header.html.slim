@@ -1,0 +1,12 @@
+nav.navbar.navbar-default.navbar-fixed-top
+  div.container
+    header.navbar-header
+      a.navbar-brand href="/"
+        p.title = t :base, scope: [:page, :title]
+
+    div.collapse.navbar-collapse#navbar-main
+      ul.nav.navbar-nav
+        li
+          a.nav-link.current href="/meetings" = t :meeting, scope: [:nav, :title]
+        / li
+          / a.nav-link href="/products" = t :product, scope: [:nav, :title]
